@@ -44,9 +44,19 @@ exam %>%
   summarise (mean_math = mean(math))
 # 안됨!!!
 
+####
+exam %>% 
+  filter(!is.na(math)) %>% 
+  summarise(meanM = mean(math))
+
+exam %>% 
+  na.omit(math) %>% 
+  summarise(mean_m = mean(math))
+
+####
+
 # 1
-#exam %>% 
- # summarise (mean_math = mean(math, na.rm = T)
+exam %>% summarise(mean_math = mean(math, na.rm = T)
 
 # 3 개추
 exam_repair <- exam %>% filter(!is.na(math))

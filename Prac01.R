@@ -15,7 +15,6 @@ hist(midwest$ratio)
 
 # Q4
 mean(midwest$ratio)
-
 midwest$group <- ifelse(midwest$ratio > 0.487, "large","small")
 
 # Q5

@@ -15,3 +15,4 @@ mpg_fl <- left_join(mpg, fuel, by = "fl")
 mpg_fl %>% 
   select(model, fl, price_fl) %>% 
   head(5)
+
